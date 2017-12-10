@@ -210,9 +210,9 @@ public class KNXGenericThingHandler extends BaseThingHandler
                 for (GroupAddress address : knxChannelSelectorProxy.getReadAddresses(selector, channelConfiguration,
                         null)) {
                     if (mustRead || readInterval.intValue() > 0) {
-                        scheduleReadJob(address,
-                                knxChannelSelectorProxy.getDPT(address, selector, channelConfiguration, null), true,
-                                BigDecimal.ZERO);
+                        // scheduleReadJob(address,
+                        // knxChannelSelectorProxy.getDPT(address, selector, channelConfiguration, null), true,
+                        // BigDecimal.ZERO);
                     }
                 }
             } catch (KNXFormatException e) {
@@ -242,9 +242,9 @@ public class KNXGenericThingHandler extends BaseThingHandler
                     for (GroupAddress address : knxChannelSelectorProxy.getReadAddresses(selector, channelConfiguration,
                             null)) {
 
-                        scheduleReadJob(address,
-                                knxChannelSelectorProxy.getDPT(address, selector, channelConfiguration, null), mustRead,
-                                readInterval);
+                        // scheduleReadJob(address,
+                        // knxChannelSelectorProxy.getDPT(address, selector, channelConfiguration, null), mustRead,
+                        // readInterval);
                     }
                 } catch (KNXFormatException e) {
                     logger.error("An exception occurred while scheduling a read job : '{}'", e.getMessage(), e);
@@ -404,8 +404,8 @@ public class KNXGenericThingHandler extends BaseThingHandler
                         if (channelConfiguration != null) {
                             for (GroupAddress address : knxChannelSelectorProxy.getReadAddresses(selector,
                                     channelConfiguration, command)) {
-                                scheduleReadJob(address, knxChannelSelectorProxy.getDPT(address, selector,
-                                        channelConfiguration, command), true, BigDecimal.ZERO);
+                                // scheduleReadJob(address, knxChannelSelectorProxy.getDPT(address, selector,
+                                // channelConfiguration, command), true, BigDecimal.ZERO);
                             }
                         } else {
                             logger.warn("The configuration of channel '{}' is empty", channelUID.getId());

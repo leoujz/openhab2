@@ -22,7 +22,7 @@ import org.eclipse.smarthome.core.types.Command;
 import org.eclipse.smarthome.core.types.State;
 
 /**
- * This is the default implementation for a passive profile.
+ * This is the default implementation for an inbound profile.
  *
  * In contrast to the {@link SystemDefaultProfile} it does not forward any commands or updates to the ThingHandler.
  * Instead, it takes
